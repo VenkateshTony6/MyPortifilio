@@ -1,0 +1,64 @@
+@import "tailwindcss";
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #e5e7eb;
+  background: #0f172a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+a { color: #38bdf8; }
+nav, main, footer { width: min(1100px, 90%); margin-inline: auto; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; padding-block: 1.5rem; }
+section { padding-block: 3rem; }
+article { margin-block: 1rem; padding: 1rem; border: 1px solid #334155; border-radius: 0.75rem; }
+section > article { background: #fff; }
+li { margin-block: 0.4rem; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+.skill-card {
+  min-height: 9rem;
+  overflow: hidden;
+}
+.skill-category {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.project-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+.project-summary::-webkit-details-marker { display: none; }
+.project-title { font-size: clamp(1.2rem, 2.5vw, 1.75rem); font-weight: 600; }
+.project-logo {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.project-initials {
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: #e2e8f0;
+  color: #1e293b;
+  font-weight: 700;
+}
+.project-details { padding-top: 1rem; }
+.skill-card:hover .skill-category,
+.skill-card:focus-visible .skill-category {
+  opacity: 1;
+  transform: translateY(0);
+}
+form { display: grid; gap: 1rem; max-width: 32rem; }
+label { display: grid; gap: 0.35rem; }
+input, textarea, button { padding: 0.75rem; font: inherit; }
+textarea { min-height: 8rem; resize: vertical; }
+footer { padding-block: 2rem; }
